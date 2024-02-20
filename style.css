@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 .navbar{
     background-color: #fff;
     height: 60px;
@@ -65,5 +68,180 @@ transition: 0.3s background-color;
 }
 }
 
+/*Admin page menu styling*/
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+}
 
+body{
+    display: flex;
+}
+
+#sidebar{
+    position:sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 10px;
+    height: 100vh;
+    padding: 0 ;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(113, 99, 186, 255);
+}
+
+#sidebar:hover{
+    width: 260px;
+    transition: 0.5s;
+}
+
+
+
+.logo img {
+    display: block; /* Centers the image in the div */
+    max-height: 70px; /* Adjust based on your preference */
+    max-width: 100%; /* Ensures the image is not wider than the sidebar */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+#v-pills-tab ul{
+    height: 88px;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+#v-pills-tab li{
+    padding: 1rem;
+    margin: 1px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+#v-pills-tab a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+}
+
+#v-pills-tab a:hover {
+    background-color: #cac7c7;
+    color: #fff;
+}
+
+#v-pills-tab a.active, #v-pills-tab a.active:hover {
+    background-color: #cac7c7;
+    color: #fff;
+}
+
+
+
+
+
+/* .logout{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+} */
+
+
+/* Dasboard styling */
+#dashboard{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title{
+    color: rgba(113, 99, 186, 255);
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+}
+
+.header--title h2{
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.card-img-top{
+    width: 100%; /* Ensure the image covers the full width of the card */
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover;
+}
+
+
+#dashbtn{
+  color: #fff;
+  background-color: rgba(113, 99, 186, 255);
+  font-family: "Poppins" , Arial, Helvetica, sans-serif;
+}
+
+/* search button*/
+.input-box input{
+    position: relative;
+    height: 50%;
+    width: 25%;
+    padding: 0 15px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+#deleteBtn{
+    background-color: rgba(113, 99, 186, 255);
+}
+
+/* table */
+#head .tabheader{
+    background-color: rgba(113, 99, 186, 255);
+    color: #fff;
+}
+
+
+/* table scroll */
+.table-scroll {
+    max-height: 400px; /* Adjust based on your needs */
+    overflow-y: auto;
+}
+
+/* Enhance the existing .table-responsive class if necessary */
+.table-responsive {
+    /* Ensures responsiveness */
+    width: 100%;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+}
 

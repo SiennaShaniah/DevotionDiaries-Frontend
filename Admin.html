@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar / Menu -->
+        <div class="col-auto min-vh-100" id="sidebar">  
+            <div class="logo">
+            <a href="index.html">
+                <img src="Images/devlogo.png" alt="DevotionDiaries" style="max-height: 100%; max-width: 100%;">
+            </a>
+            </div>            
+            <!-- Nav tabs -->
+            <ul class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <li class="nav-item">
+                    <a class="nav-link active" id="v-pills-dashboard-tab" data-bs-toggle="pill" href="#dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">
+                        <i class="fas fa-tachometer-alt"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="v-pills-userManagement-tab" data-bs-toggle="pill" href="#userManagement" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <i class="fas fa-users-cog"></i> User Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="v-pills-prompt-tab" data-bs-toggle="pill" href="#uploadPrompts" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <i class="fas fa-upload"></i> Upload Prompt
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="v-pills-feedback-tab" data-bs-toggle="pill" href="#userFeedback" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                        <i class="fas fa-comments"></i> User Feedback
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html">
+                    <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill"   aria-controls="v-pills-profile" aria-selected="false">
+                        <i class="fas fa-sign-out-alt"></i> Log Out
+                    </a>
+                </a>
+                </li>
+                
+            </ul>
+        </div>
+
+
+
+        <!-- Tab Content/DASHBOARD -->
+        <div class="col">
+            <div class="tab-content" id="v-pills-tabContent">
+                <!-- Dashboard Tab Pane -->
+                <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+                    <!-- Dashboard Content Here -->
+                    <div class="dashboard">
+                        <div class="header--wrapper">
+                            <div class="header--title">
+                                <span>Welcome To</span>
+                                <h2>Admin Dashboard</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-5 align-items-center justify-content-center g-5" id="dashrow">
+                            <div class="col-xl-4 col-lg-4 col-xl-3" id="dashcol">
+                                <div class="card" id="dashcard">
+                                    <img src="/Images/bible.jpg" class="card-img-top" alt="Description of the image">
+                                    <div class="card-body text-center py-4" id="dashcardBody">
+                                        <h4 class="card-title">Number of Users</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <a href="userManagement" class="btn btn-primary" id="dashbtn" >User Management</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-xl-4 col-lg-4 col-xl-3" id="dashcol">
+                                <div class="card" id="dashcard">
+                                    <img src="/Images/bible01.jpg" class="card-img-top" alt="Description of the image">
+                                    <div class="card-body text-center py-4" id="dashcardBody">
+                                        <h4 class="card-title">Prompt For Today</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <a href="uploadPrompts" class="btn btn-primary" id="dashbtn" >Prompts</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-xl-4 col-lg-4 col-xl-3" id="dashcol">
+                                <div class="card" id="dashcard">
+                                    <img src="/Images/bible02.jpg" class="card-img-top" alt="Description of the image">
+                                    <div class="card-body text-center py-4" id="dashcardBody">
+                                        <h4 class="card-title">Recent Feedback</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                        <a href="userFeedback" class="btn btn-primary" id="dashbtn" >Recent Feedbacks</a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                     </div> 
+                </div>
+
+
+                <!-- Tab Content/USER MANAGEMENT -->
+                <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+                    <!-- USER MANAGEMENT Content Here -->
+                    <div class="dashboard">
+                        <div class="header--wrapper">
+                            <div class="header--title">
+                                <h2>User Management</h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="text" placeholder="Search...">
+                            <span class="search">
+                                <i>
+                                    <img src="Icons/search (1).png" alt="Search">
+                                </i>
+                            </span>
+                        </div>
+                        <br>
+                        <div>
+                            <a href="deleteAction" class="btn btn-primary" id="deleteBtn">Delete Item</a>
+                        </div>
+                        
+                        <div class="container mt-5 " id="usertable">
+                            <h5>User Information</h5>
+                            <div class="table-scroll">
+                            <table class="table table-responsive table-bordered border-dark table-hover text-center table-scroll" id="userTableContainer"  >
+
+                                <tr class=" table-active text-uppercase text-White" id="head">
+                                    <th class="tabheader">User ID</th>
+                                    <th class="tabheader">Username</th>
+                                    <th class="tabheader">Password</th>
+                                    <th class="tabheader">Email</th>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Angel</td>
+                                    <td>Angel17</td>
+                                    <td>angel@gmail.com</td>
+                                </tr>
+                               <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Angel</td>
+                                    <td>Angel17</td>
+                                    <td>angel@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Angel</td>
+                                    <td>Angel17</td>
+                                    <td>angel@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Angel</td>
+                                    <td>Angel17</td>
+                                    <td>angel@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Angel</td>
+                                    <td>Angel17</td>
+                                    <td>angel@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0002</td>
+                                    <td>Angel</td>
+                                    <td>Angel17</td>
+                                    <td>angel@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>0001</td>
+                                    <td>Shienna</td>
+                                    <td>Shienna17</td>
+                                    <td>sienna@gmail.com</td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+                     </div> 
+        </div>
+
+                  
+                  
+                       
+                        
+
+
+
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
