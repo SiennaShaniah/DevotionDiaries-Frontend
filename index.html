@@ -6,7 +6,7 @@
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="style.css" rel="stylesheet">
 
 
@@ -27,40 +27,200 @@
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link mx-lg-2" href="#">About Us</a>
+                  <a class="nav-link mx-lg-2" href="#aboutus">About Us</a>
                 </li>
                  <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="#">Overview</a>
+                    <a class="nav-link mx-lg-2" href="#overview">Overview</a>
                   </li>
                 <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="#">FAQs</a>
+                    <a class="nav-link mx-lg-2" href="#faqs">FAQs</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link mx-lg-2" href="#">Contact</a>
+                    <a class="nav-link mx-lg-2" href="#contact">Contact</a>
                   </li>
 
                 </ul>
             </div>
           </div>
-          <a href="#" class="login-button" >Login/Register</a>
+          <div class="nav-button">
+            <button class="btn-black-btn" id="loginBtn" onclick="login()">Sign In</button>
+            <!-- <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> -->
+          </div>
+          <!-- <a href="#" class="login-button" onclick="login()">Sign In</a>
+          <a href="#" class="reg-button" onclick="register()">Sign Up</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> -->
+
+          <div class="nav-menu-btn">
+            <i class="bi bi-list" onclick="myMenuFunction()"></i>
+            </div>
         </div>
       </nav>
     
-<!--Hero Section-->
-<section class ="hero-section">
-
+<!--START Home Section-->
+<section class ="home" id="home">
+  <div class="container">
+    <div class="row min-vh-100 align-items-center">
+      <div class="content">
+        <h3>Welcome to Devotion Diaries - </h3>
+        <h3>Your Daily Companion for Spiritual Growth and Reflection</h3>
+        <p>Discover Tranquility in Every Entry: Commence Your Online Devotion Diary</p>
+        <a href="#" class="sign-in-button">Start Now</a>
+      </div>
+    </div>
+  </div>
 </section>
 
 
-<!--End Hero Section-->
+
+<!--End home Section-->
+
+<!-- START about us -->
+<section class="bg-light" id="aboutus">
+  <div class="container">
+    <div class="text-center">
+      <h1>Learn more about us!</h1>
+      <p>Welcome to Devotion Diaries, your online sanctuary for spiritual reflection and growth. At Devotion Diaries, we believe in the power of personal devotion and the transformative impact it can have on one's life. Our platform is designed to provide a sacred space for individuals to express their thoughts, connect with their spirituality, and cultivate a deeper sense of purpose.</p>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-12 col-lg-4">
+        <div class="card border-0">
+            <div class="card-body text-center py-5">
+                <h4 class="card-title">Our Mission</h4>
+                <p class="lead card-subtitle">At the heart of Devotion Diaries is a mission to inspire and empower individuals on their spiritual journey. We aim to create a supportive community where users can freely share their devotion, insights, and experiences, fostering a sense of unity and understanding among diverse spiritual practices.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <div class="card border-0">
+            <div class="card-body text-center py-5">
+                <h4 class="card-title">What we are</h4>
+                <p class="lead card-subtitle">Devotion Diaries was founded by a group of passionate individuals who share a common vision for creating a positive impact in the world through the exploration of devotion. Our team is composed of seasoned developers, designers, and spiritual enthusiasts, united by the belief that technology can be a powerful tool for fostering spiritual growth.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-lg-4">
+        <div class="card border-0">
+            <div class="card-body text-center py-5">
+                <h4 class="card-title">Goals</h4>
+                <p class="lead card-subtitle">Our platform inspires spiritual growth and fosters a positive, inclusive community for daily devotion practices. We encourage consistent routines, mindful reflection, and celebrate diverse spiritual practices. Providing accessible resources and a user-friendly experience, our goal is to enable personal progress and a sense of accomplishment on individual spiritual journeys.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- END aboutus -->
+
+<!-- START overview -->
+<section id="overview">
+    <div class="slidershow middle">
+        <div class="slides">
+          <input type="radio" name="r" id="r1" checked>
+          <input type="radio" name="r" id="r2">
+          <input type="radio" name="r" id="r3">
+          <input type="radio" name="r" id="r4">
+          <input type="radio" name="r" id="r5">
+          <div class="slide s1">
+            <img src="1.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="2.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="3.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="4.png" alt="">
+          </div>
+          <div class="slide">
+            <img src="5.png" alt="">
+          </div>
+        </div>
+  
+        <div class="navigationBTN">
+          <label for="r1" class="bar"></label>
+          <label for="r2" class="bar"></label>
+          <label for="r3" class="bar"></label>
+          <label for="r4" class="bar"></label>
+          <label for="r5" class="bar"></label>
+        </div>
+      </div>
+</section>
+<!-- END overview -->
+
+<!-- END FAQs -->
+
+<!-- START Contact -->
+
+<section id="contact">
+  <div class="container-lg">
+      <div class="text-center">
+          <h2>Get in touch
+              <p class="lead">Questions to ask? Fill the in form</p>
+          </h2>
+      </div>
+
+      <div class="row justify-content-center my-5">
+          <div class="col-lg-6">
+              <form>
+                  <div class="mb-4 input-group">
+                      <span class="input-group-text">
+                          <i class="bi bi-envelope-fill"></i>
+                      </span>
+                      <input type="email" class="form-control" id="email" placeholder="e.g. jhondoe@example.com">
+                      <!-- tooltip -->
+                      <span class="input-group-text">
+                          <span class="tt" data-bs-placement="bottom" title="Enter email address">
+                              <i class="bi bi-question-circle text-muted"></i>
+                          </span>
+                      </span>
+                  </div>
+
+                  <div class="mb-4 input-group">
+                      <span class="input-group-text">
+                          <i class="bi bi-person-fill"></i>
+                      </span>
+                      <input type="text" class="form-control" id="name" placeholder="e.g. John Doe">
+                      <!-- tooltip -->
+                      <span class="input-group-text">
+                          <span class="tt" data-bs-placement="bottom" title="Enter your full name">
+                              <i class="bi bi-question-circle text-muted"></i>
+                          </span>
+                      </span>
+                  </div>
+
+
+                  <div class="form-floating mb-4 mt-5">
+                      <textarea id="query" class="form-control" style="height:140px"></textarea>
+                      <label for="query">Your query...</label>
+                  </div>
+
+                  <div class="mb-4 text-center">
+                      <button type="submit" class="btn btn-secondary">Submit</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- END Contact -->
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
     crossorigin="anonymous"></script>
+    <script>
+      const tooltips = document.querySelectorAll('.tt')
+      tooltips.forEach(t=>{
+          new bootstrap.Tooltip(t)
+      })
+  </script>
 </body>
 </html>
