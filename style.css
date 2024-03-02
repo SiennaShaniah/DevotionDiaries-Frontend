@@ -42,13 +42,14 @@ body{
 
 
 #v-pills-tab ul{
-    height: 88px;
+    height: 50px;
     position: relative;
     list-style: none;
     padding: 0;
 }
 
 #v-pills-tab li{
+    height: 50px;
     padding: 1rem;
     margin: 1px 0;
     border-radius: 8px;
@@ -77,18 +78,27 @@ body{
 
 
 
-
-
-/* .logout{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-} */
-
-
 /* Dasboard styling */
 #dashboard{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+#userManagement{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+    background: url(Images/bible04.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#uploadPrompt{
     position: relative;
     background: #ebe9e9;
     width: 100%;
@@ -100,6 +110,12 @@ body{
     height: 50px;
     cursor: pointer;
     border-radius: 50%;
+}
+
+#welcome{
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: large;
 }
 
 .header--wrapper{
@@ -131,34 +147,53 @@ body{
 }
 
 
-#dashbtn{
-  color: #fff;
-  background-color: rgba(113, 99, 186, 255);
-  font-family: "Poppins" , Arial, Helvetica, sans-serif;
+#dashbtn {
+    color: #fff;
+    background-color: rgba(113, 99, 186, 1); /* Adjusted the opacity value to 1 */
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
+
+#dashbtn:hover {
+    background-color: rgba(113, 99, 186, 0.8); /* Lighten the background on hover */ /* Change text color for contrast */
+    transform: scale(1.05); /* Slightly increase the button size */
+}
+
 
 /* search button*/
 .input-box input{
     position: relative;
-    height: 50%;
-    width: 25%;
-    padding: 0 15px;
+    height: 100%;
+    width: 40%; /* Increased width for a larger input box */
+    padding: 10px 20px; /* Increased padding for more internal space */
     outline: none;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border: 1px solid #ccc; /* Added a border to make the input box more visible */
+    border-radius: 20px;
+    font-size: 16px; /* Increased font size for better readability */
     font-weight: 400;
     color: black;
+    background-color: #f9f9f9; /* Optional: added a background color for better contrast */
 }
 
-#deleteBtn{
-    background-color: rgba(113, 99, 186, 255);
+
+#deleteBtn {
+    background-color: rgba(113, 99, 186, 1); /* Ensured opacity is set correctly */
+    color: #fff;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
 }
+
+#deleteBtn:hover {
+    background-color: rgba(113, 99, 186, 0.8); /* Lighten the background on hover */
+    color: #eee7e7; /* Change text color for contrast */
+    transform: scale(1.05); /* Slightly increase the button size */
+}
+
 
 /* table */
 #head .tabheader{
     background-color: rgba(113, 99, 186, 255);
     color: #fff;
+    font-weight: 500;
 }
 
 
@@ -174,4 +209,292 @@ body{
     width: 100%;
     overflow-x: auto; /* Allows horizontal scrolling on smaller screens */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+}
+
+/* admin user management */
+#usertable h5{
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 800;
+    color: rgba(113, 99, 186, 255);
+}
+
+/* admin uploadprompts */
+
+#upbtn {
+    background-color: rgba(113, 99, 186);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#upbtn:hover {
+    background-color: rgba(113, 99, 186, 0.8); /* Slightly lighten the button on hover */
+    color: #eee7e7; 
+    transform: scale(1.05); /* Optional: Change the text color slightly if needed */
+}
+
+#promptbtn {
+    background-color: rgba(113, 99, 186);
+    color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#promptbtn:hover {
+    background-color: rgba(113, 99, 186, 0.8); /* Slightly lighten the button on hover */
+    color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+
+
+
+
+/* PROFILE TAB  */
+.prof{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--title{
+    color: rgba(113, 99, 186, 255);
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+}
+
+.header--title{
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+
+
+#userprof {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px; /* Adjust the space between the picture and the details */
+}
+
+.user-picture-wrapper {
+    display: flex; /* Ensures the content within aligns properly */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    overflow: hidden; /* Prevents the image from overflowing its container */
+}
+
+.user-picture-wrapper img {
+    max-height: 100%; /* Ensures the image height does not exceed its container */
+}
+
+.user-details-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Adjusts content to the center if there's extra space */
+}
+
+
+
+
+.header--wrapper, .user-info, .container {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: rgba(113, 99, 186);
+    border-color: rgba(113, 99, 186);
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: darken(rgba(113, 99, 186), 10%);
+    border-color: darken(rgba(113, 99, 186), 10%);
+}
+
+#btnupdate{
+    background-color: rgba(113, 99, 186);
+    color: white; /* Ensures the text color is white for better readability */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#btnupdate:hover {
+    background-color: rgba(113, 99, 186, 0.8); /* Lighten the background on hover */
+    color: #eee7e7; /* Change text color for contrast */
+    transform: scale(1.05); /* Slightly increase the button size */
+}
+
+#userDetails card {
+    background-color: #f9f9f9; /* Light grey background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    max-width: 400px; /* Maximum width */
+    margin: 20px auto; /* Centering the card */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adding a subtle shadow */
+}
+
+#userDetails {
+    font-size: 16px; /* Increased font size for better readability */
+    color: #333; /* Darker font color */
+    margin-bottom: 10px; /* Space between lines */
+}
+
+#userDetails strong {
+    color: #555; /* Even darker color for labels */
+    margin-right: 5px; /* Space between label and value */
+}
+
+/* Enhancing span elements */
+#userFirstName, #userLastName, #userEmail, #userDetailsInfo {
+    color: rgba(113, 99, 186); /* Bootstrap primary color for emphasis */
+    font-weight: 500; /* Medium font weight for better visibility */
+}
+
+
+
+
+
+
+/* New Journal Tab Pane */
+
+
+#newJournal{
+    background: url(Images/bible05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#card-header{
+    background-color: rgba(113, 99, 186);
+    color: #fff;
+}
+
+#card-header h2{
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 800;
+}
+
+#btncreate {
+    background-color: rgba(113, 99, 186);
+    color: #fff; /* Ensuring text color is white for better readability */
+}
+
+/* DEVO PAGES */
+
+#devoPages{
+    background: url(Images/bible05.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#headdevo{
+    background-color: rgba(113, 99, 186);
+    color: #fff;
+}
+
+#headdevo h2{
+    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: 800;
+}
+
+#btnSaveEntry{
+    background-color: #7163ba;
+    color: #fff; 
+}
+
+
+/* VIEW JOURNAL STYLING */
+
+.viewjournal{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+
+/* ADMIN UPLOAD PROMPT */
+#uploadPrompt{
+    background: url(Images/loginRegBG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+
+/* USER DAILY PROMPT */
+
+#todaysPrompt{
+    position: relative;
+    background: #ebe9e9;
+    width: 100%;
+    padding: 1rem;
+}
+
+#modalbtn{
+    background-color: rgba(113, 99, 186);
+    color: white; /* Ensures the text color is white for better readability */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+
+#modalbtn1:hover {
+    background-color: rgba(113, 99, 186, 0.8); /* Lighten the background on hover */
+    color: #eee7e7; /* Change text color for contrast */
+    transform: scale(1.05); /* Slightly increase the button size */
 }
