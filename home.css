@@ -11,9 +11,10 @@
 }
 
 .home{
-    background: url(Images/homeBG.jpg) no-repeat;
+    background: url(/Images/homeBG.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    /* background-color: #dda83f73; */
 }
 
 
@@ -71,24 +72,16 @@
     z-index: 2;  
 }
 
-.login-container {
-    position: absolute;
-    left: 4px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    transition: .5s ease-in-out;
+.aboutUs{
+    background-color: #dda83f73;
 }
-
-.register-container {
-    position: absolute;
-    right: -520px;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    transition: .5s ease-in-out;
+.row{
+    color: #ffffff31;
 }
-
+.card {
+    height: 25rem;
+    opacity: 0.8;
+  }
 
 .top span{
     color: rgba(113, 99, 186, 0.8); 
@@ -267,48 +260,66 @@ section{
 /* SLIDER */
 
 
-.slidershow{
-    width: 700px;
-    height: 400px;
+#overview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 175vh; /* Set the height to 100% of the viewport height */
+  }
+  .slidershow {
+    width: 100%; /* Adjust the width as needed */
+    height: 100%;
     overflow: hidden;
-    
+    margin: 0 auto;
+    top: 50%;
+    position: relative;
+    transform: translateY(-50%);
+  }
+  
+  
+.slidershow {
+    width: 1000px;
+    overflow: hidden;
 }
-.center{
+
+.center {
     align-items: center;
 }
-.middle{
-    position: center;
-    top: 0%;
+
+.middle {
+    position: relative;
+    top: 500%;
     left: 50%;
-    right: 50%;
-    transform: translate(-50%,-50%);
-    
+    transform: translate(-50%, -50%);
 }
-.navigationBTN{
+
+.navigationBTN {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
- }
-.bar{
+}
+
+.bar {
     width: 50px;
     height: 10px;
-    border: 2px solid  rgba(113, 99, 186, 0.8); 
+    border: 2px solid rgba(113, 99, 186, 0.8);
     margin: 6px;
     cursor: pointer;
     transition: 0.4s;
     border-radius: 10px;
 }
-.bar:hover{
-    background:  rgba(113, 99, 186, 0.8); 
+
+.bar:hover {
+    background: rgba(113, 99, 186, 0.8);
 }
-  
-input[name="r"]{
-      position: absolute;
-      visibility: hidden;
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
 }
- 
+
 .slides{
     width: 500%;
     height: 100%;
@@ -322,21 +333,107 @@ input[name="r"]{
     width: 100%;
     height: 100%;
 }
-  
-#r1:checked ~ .s1{
+
+#r1:checked~.s1 {
     margin-left: 0;
 }
-#r2:checked ~ .s1{
+
+#r2:checked~.s1 {
     margin-left: -20%;
 }
-#r3:checked ~ .s1{
+
+#r3:checked~.s1 {
     margin-left: -40%;
 }
-#r4:checked ~ .s1{
+
+#r4:checked~.s1 {
     margin-left: -60%;
 }
-#r5:checked ~ .s1{
+
+#r5:checked~.s1 {
     margin-left: -80%;
 }
-  
 
+/* faqs */
+.faqs{
+    background-color: #dda83f73;
+}
+.wrapper {
+    max-width: 75%;
+    margin: auto;
+  }
+  
+  .wrapper > p,
+  .wrapper > h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+  }
+  
+  .wrapper > h1 {
+    letter-spacing: 3px;
+  }
+  
+  .accordion {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .accordion i {
+    font-size: 1.6rem;
+  }
+  
+  .active,
+  .accordion:hover {
+    background-color: rgba(113, 99, 186, 0.547);
+    color: #fff;
+  }
+  .pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: white;
+    overflow: hidden;
+    background-color: rgba(113, 99, 186, 0.248);
+    display: none;
+  }
+  .pannel p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  
+  .faq {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+  }
+  .faq.active {
+    border: none;
+  }
+  /* contact */
+  #contact{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+  }
+  .contact {
+    background-image: url(Images/contactBG.png);
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    text-align: end;
+
+  }
+
+  .contact .form-control {
+    background: rgba(255, 255, 255, 0.636);
+  }
+  

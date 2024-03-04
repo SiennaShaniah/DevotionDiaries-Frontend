@@ -494,7 +494,9 @@ body{
 
 
 #modalbtn1:hover {
-    background-color: rgba(113, 99, 186, 0.8); /* Lighten the background on hover */
+    background-color: #7263bacc; /* Lighten the background on hover */
     color: #eee7e7; /* Change text color for contrast */
     transform: scale(1.05); /* Slightly increase the button size */
 }
+
+/* VIEW JOURNAL */
