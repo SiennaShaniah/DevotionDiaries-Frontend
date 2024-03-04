@@ -65,7 +65,7 @@
         <p>Discover Tranquility in Every Entry: Commence Your Online Devotion Diary</p>
         <!-- Updated the "content" div in the home section -->
         <!-- Use an anchor tag with href for redirection -->
-        <a class="sign-in-button" href="loginReg.html">Start Now</a>
+        <a class="sign-in-button" href="loginReg.php">Start Now</a>
       </div>
     </div>
   </div>

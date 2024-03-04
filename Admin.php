@@ -132,68 +132,156 @@
                                 <h2>Upload Prompt</h2>
                             </div>
                         </div>
-            
-                        <div class="card">
-                            <div class="card-body">
-                                <!-- Form for uploading prompts -->
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="entryDate" class="form-label">Date:</label>
-                                        <input type="date" class="form-control" id="entryDate">
-                                    </div>
-                        
-                                    <div class="mb-3">
-                                        <label for="promptTitle" class="form-label">Title</label>
-                                        <textarea class="form-control" id="promptTitle" rows="1"></textarea>
-                                    </div>
-                        
-                                    <div class="mb-3">
-                                        <label for="promptText" class="form-label">Prompt Text</label>
-                                        <textarea class="form-control" id="promptText" rows="3"></textarea>
-                                    </div>
 
-                                    <div class="action-buttons">
-                                    <button type="submit" id="upbtn" class="btn btn-primary">Submit</button>
-                                    <button type="button" id="upbtn" class="btn btn-secondary">Cancel</button>
-                                </div>
-                                </form>
-                            </div> 
-                        </div>
+                        <form action="connectAdmin.php" method="post">
+  <div class="card">
+    <div class="card-body">
+      <!-- Form for uploading prompts -->
+      <div class="mb-3">
+        <label for="entryDate" class="form-label">Date:</label>
+        <input type="date" class="form-control" id="entryDate" name="entryDate">
+      </div>
 
-                        <div class="container mt-5 " id="prompttable">
-                            <h5>Recent Prompts</h5>
-                            <div class="table-scroll">
-                            <table class="table table-responsive table-bordered border-dark table-hover text-center table-scroll" id="userTableContainer"  >
-            
-                                <tr class=" table-active text-uppercase text-White" id="head">
-                                    <th class="tabheader">Date</th>
-                                    <th class="tabheader">Title</th>
-                                </tr>
-                            </table>
-                        </div>
-                        </div>
+      <div class="mb-3">
+        <label for="promptTitle" class="form-label">Title</label>
+        <textarea class="form-control" id="promptTitle" rows="1" name="promptTitle"></textarea>
+      </div>
 
-                        <div class="action-buttons text-center mt-3">
-                            <button type="button" class="btn btn-primary me-2" id="promptbtn">Delete</button>
-                            <button type="button" class="btn btn-primary me-2" id="promptbtn">Edit</button>
-                            <button type="button" class="btn btn-primary me-2" id="promptbtn">Update</button>
-                        </div>
+      <div class="mb-3">
+        <label for="promptText" class="form-label">Prompt Text</label>
+        <textarea class="form-control" id="promptText" rows="3" name="promptText"></textarea>
+      </div>
+
+      <div class="action-buttons">
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        <button type="button" onclick="resetForm()" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div> 
+  </div>
+</form>
+
+<div class="container mt-5" id="prompttable">
+    <h5>Recent Prompts</h5>
+    <?php
+    // Database connection parameters
+    $host = 'localhost';
+    $db_user = 'root';
+    $db_password = '';
+    $db_name = 'Devotion_Diaries';
+
+    // Create database connection
+    $mysqli = new mysqli($host, $db_user, $db_password, $db_name);
+    if ($mysqli->connect_error) {
+        die("Connection failed: " . $mysqli->connect_error);
+    }
+
+    // Query to fetch recent prompts from the database
+    $query = "SELECT entryDate, promptTitle FROM prompts ORDER BY entryDate DESC";
+    $result = $mysqli->query($query);
+    ?>
+
+    <div class="table-scroll">
+        <table class="table table-responsive table-bordered border-dark table-hover text-center" id="userTableContainer">
+            <thead>
+                <tr class="table-active text-uppercase text-white" id="head">
+                    <th class="tabheader">Date</th>
+                    <th class="tabheader">Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                // Check if there are any results
+                if ($result && $result->num_rows > 0) {
+                    // Output data of each row
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['entryDate']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['promptTitle']) . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='2'>No prompts found</td></tr>";
+                }
+                $mysqli->close();
+                ?>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="action-buttons text-center mt-3">
+    <button type="button" class="btn btn-primary me-2" id="deletePromptBtn">Delete</button>
+    <button type="button" class="btn btn-primary me-2" id="editPromptBtn">Edit</button>
+    <button type="button" class="btn btn-primary me-2" id="updatePromptBtn">Update</button>
+</div>
+
 
                     </div>
 
                 </div>
 
 
+<!--upload prompt Modal -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="messageModalLabel">Submission Status</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php if (isset($_SESSION['message'])) echo htmlspecialchars($_SESSION['message']); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
 
+
+
+
+
+
+                
 
             </div>
         </div>
     </div>
 </div>
+
+<!-- reset prompt  -->
+<script>
+function resetForm() {
+  // This will reset all form values to their default values
+  document.querySelector('form').reset();
+}
+</script>
+
+<!-- upload prompt modal -->
+<script>
+  <?php if (isset($_SESSION['message'])): ?>
+    $('#messageModal').modal('show');
+    <?php unset($_SESSION['message']); // Clear the message after displaying ?>
+  <?php endif; ?>
+</script>
+
+<!-- for double clicks -->
+<script>
+$(document).ready(function(){
+    $('form').submit(function(){
+        $(this).find(':submit').attr('disabled','disabled');
+    });
+});
+</script>
+
 
 <!-- Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
