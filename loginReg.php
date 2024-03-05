@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="stylelucid.css">
-    <title>LogIn|SignUp</title>
-    <!-- Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
-
-
-
+    <title></title>
 </head>
 <body>
  <div class="wrapper">
     <nav class="nav">
         <div class="nav-logo">
-           
-            <a href="index.php" class="nav-link">DevotionDiaries</a>
+            <p>DevotionDiaries</p>
         </div>
     </nav>
-    
-    
 
 <!----------------------------- Form box ----------------------------------->    
     <div class="form-box">
@@ -31,17 +22,16 @@
         <!------------------- login form -------------------------->
 
         <div class="login-container" id="login">
-        <form action="connect.php" method="post">
             <div class="top">
                 <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
                 <header>Login</header>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email" name="email">
+                <input type="text" class="input-field" placeholder="Email">
                 <i class="bx bx-user"></i>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Password" name="password">
+                <input type="password" class="input-field" placeholder="Password">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
@@ -56,88 +46,65 @@
                     <label><a href="#" id="forgot-password">Forgot password?</a></label>
                 </div>
             </div>
-            </form>
         </div>
-
-
-
 
         <!------------------- registration form -------------------------->
         <div class="register-container" id="register">
-        
             <div class="top">
                 <span>Have an account? <a href="#" onclick="login()">Login</a></span>
                 <header>Sign Up</header>
             </div>
-
-            <form action="connect.php" method="post">
             <div class="two-forms">
-           
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Firstname" name="firstname" required>
+                    <input type="text" class="input-field" placeholder="Firstname">
                     <i class="bx bx-user"></i>
                 </div>
                 <div class="input-box">
-                    <input type="text" class="input-field" placeholder="Lastname" name="lastname" required>
+                    <input type="text" class="input-field" placeholder="Lastname">
                     <i class="bx bx-user"></i>
                 </div>
             </div>
             <div class="input-box">
-                <input type="text" class="input-field" placeholder="Email" name="email" required>
+                <input type="text" class="input-field" placeholder="Email">
                 <i class="bx bx-envelope"></i>
             </div>
             <div class="two-forms">
                 <div class="input-box">
-                    <input type="password" class="input-field" placeholder="Password" name="password" required>
+                    <input type="password" class="input-field" placeholder="Password">
                     <i class="bx bx-lock-alt"></i>
                 </div>
             </div>
             <div class="input-box">
-                <input type="password" class="input-field" placeholder="Confirm Password" name="confirm_password" required>
+                <input type="password" class="input-field" placeholder="Confirm Password">
                 <i class="bx bx-lock-alt"></i>
             </div>
             <div class="input-box">
-                <input type="submit" class="submit" value="Register" name="register">
+                <input type="submit" class="submit" value="Register">
             </div>
-            </form>
+            
             </div>
-           
- </div>  
+        </div>
 
-
-    <div id="forgotContainer" class="forgot-container center" >
-    <form action="connect.php" method="post">
-        <div class="forgot-form">
-            <div class="forgot-container" id="forgot">
-                <div class="top">
-                    <span><a href="#" onclick="login()">Back to Login</a></span>
-                    <header>Reset Password</header>
-                </div>
-                <!-- Email Input Box -->
-                <div class="input-box">
-                    <input type="email" class="input-field" placeholder="Your Email" name="email" required>
-                    <i class="bx bx-envelope"></i>
-                </div>
-                <!-- Submit Button -->
-                <div class="input-box">
-                    <input type="submit" class="submit" value="Send Reset Link">
+        <div id="forgotContainer" class="forgot-container center">
+            <div class="forgot-form">
+                <div class="forgot-container" id="forgot">
+                    <div class="top">
+                        <span><a href="#" onclick="login()">Back to Login</a></span>
+                        <header>Forgot Password</header>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Email">
+                        <i class="bx bx-envelope"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="submit" class="submit" value="Submit">
+                    </div>
                 </div>
             </div>
         </div>
-    </form>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
+        
+    </div>
+</div>   
 
 
 <script>
@@ -206,14 +173,5 @@ document.getElementById('forgot').querySelectorAll("input").forEach(function(ele
 });
 </script>
 
-
-
-<!-- At the end of your body -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-

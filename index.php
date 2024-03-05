@@ -16,61 +16,54 @@
 <!--NAVBAR SETUP-->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand me-auto" href="#">DevotionDiaries</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon">Sign in</span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-lg-2" href="#aboutus">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-lg-2" href="#overview">Overview</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-lg-2" href="#faqs">FAQs</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-lg-2" href="#contact">Contact</a>
-        </li>
-      </ul>
-      <div class="nav-button">
-        <button class="btn-black-btn" id="loginBtn" onclick="login()">Sign In</button>
-        <!-- <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> -->
+      <a class="navbar-brand me-auto" href="#">DevotionDiaries</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#aboutus">About Us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#overview">Overview</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#faqs">FAQs</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link mx-lg-2" href="#contact">Contact</a>
+              </li>
+          </ul>
+          <div class="nav-button">
+              <button class="btn-black-btn" id="loginBtn" onclick="login()">Sign In</button>
+              <!-- <button class="btn" id="registerBtn" onclick="register()">Sign Up</button> -->
+          </div>
       </div>
-      <!-- <a href="#" class="login-button" onclick="login()">Sign In</a>
-      <a href="#" class="reg-button" onclick="register()">Sign Up</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button> -->
-      <div class="nav-menu-btn">
-        <i class="bi bi-list" onclick="myMenuFunction()"></i>
-        </div>
-    </div>
+      
   </div>
 </nav>
 
     
 <!--START Home Section-->
-<section class="home" id="home">
+<section class ="home" id="home">
   <div class="container">
     <div class="row min-vh-100 align-items-center">
       <div class="content">
-        <h3>Welcome to Devotion Diaries -</h3>
+        <h3>Welcome to Devotion Diaries - </h3>
         <h3>Your Daily Companion for Spiritual Growth and Reflection</h3>
         <p>Discover Tranquility in Every Entry: Commence Your Online Devotion Diary</p>
-        <!-- Updated the "content" div in the home section -->
-        <!-- Use an anchor tag with href for redirection -->
-        <a class="sign-in-button" href="loginReg.php">Start Now</a>
+        <!-- Inside the "content" div in the home section -->
+        <a class="sign-in-button" onclick="register()">Start Now</a>
+
       </div>
     </div>
   </div>
 </section>
-
 
 
 
@@ -128,20 +121,20 @@
           <input type="radio" name="r" id="r4">
           <input type="radio" name="r" id="r5">
           <div class="slide s1">
-            <img src="1.png" alt="">
+            <img src="profile.png" alt="">
           </div>
           <div class="slide">
-            <img src="2.png" alt="">
+            <img src="prompt.png" alt="">
           </div>
           <div class="slide">
-            <img src="3.png" alt="">
+            <img src="entry.png" alt="">
           </div>
           <div class="slide">
-            <img src="4.png" alt="">
+            <img src="view.png" alt="">
           </div>
-          <div class="slide">
+          <!-- <div class="slide">
             <img src="5.png" alt="">
-          </div>
+          </div> -->
         </div>
   
         <div class="navigationBTN">
@@ -233,20 +226,21 @@
   <div class="container-lg">
       <div class="text-end">
           <h2>Get in touch
-              <p class="lead">Questions to ask? Fill in the form</p>
+              <p class="lead">Questions to ask? Fill the in form</p>
           </h2>
       </div>
 
       <div class="row justify-content-end my-10">
           <div class="col-lg-6">
-              <!-- Updated form action to "sendEmail.php" -->
-              <form action="sendEmail.php" method="POST">
+              <form form action="https://formsubmit.co/el/derure" method="POST">
                  
                   <div class="mb-4 input-group">
                       <span class="input-group-text">
                           <i class="bi bi-envelope-fill"></i>
                       </span>
-                      <input type="email" name="email" class="form-control" placeholder="e.g. jhondoe@example.com" required>
+                      <!-- <input type="hidden" name="access_key" value="b7ae3e69-19b9-4b7a-ba30-b81ad0aac1a8"> -->
+                      <input type="email" name="email" class="form-control" placeholder="e.g. jhondoe@example.com">
+                      <!-- tooltip -->
                       <span class="input-group-text">
                           <span class="tt" data-bs-placement="bottom" title="Enter email address">
                               <i class="bi bi-question-circle text-muted"></i>
@@ -258,7 +252,9 @@
                       <span class="input-group-text">
                           <i class="bi bi-person-fill"></i>
                       </span>
-                      <input type="text" name="name" class="form-control" placeholder="e.g. John Doe" required>
+                      <!-- <input type="hidden" name="access_key" value="b7ae3e69-19b9-4b7a-ba30-b81ad0aac1a8"> -->
+                      <input type="text" name="name" class="form-control" placeholder="e.g. John Doe">
+                      <!-- tooltip -->
                       <span class="input-group-text">
                           <span class="tt" data-bs-placement="bottom" title="Enter your full name">
                               <i class="bi bi-question-circle text-muted"></i>
@@ -266,21 +262,20 @@
                       </span>
                   </div>
 
+
                   <div class="form-floating mb-4 mt-5 ">
-                      <textarea name="query" class="form-control" style="height:140px" required></textarea>
+                      <textarea name="query" class="form-control" style="height:140px"></textarea>
                       <label for="query">Your query...</label>
                   </div>
 
-                  <!-- Submit button -->
                   <div class="mb-4 text-center">
-                      <button type="submit" name="submit" class="btn btn-secondary">Submit</button>
+                      <button type="submit" name="button" class="btn btn-secondary">Submit</button>
                   </div>
               </form>
           </div>
       </div>
   </div>
 </section>
-
 
 <!-- END Contact -->
 

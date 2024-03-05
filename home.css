@@ -11,7 +11,7 @@
 }
 
 .home{
-    background: url(/Images/homeBG.jpg) no-repeat;
+    background: url(homeBG.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     /* background-color: #dda83f73; */
@@ -425,7 +425,7 @@ input[name="r"] {
     justify-content: end;
   }
   .contact {
-    background-image: url(Images/contactBG.png);
+    background-image: url(/contact.png);
     background-position: center center;
     background-size: cover;
     color: #fff;
