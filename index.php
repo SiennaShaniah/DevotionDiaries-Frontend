@@ -121,20 +121,20 @@
           <input type="radio" name="r" id="r4">
           <input type="radio" name="r" id="r5">
           <div class="slide s1">
-            <img src="profile.png" alt="">
+            <img src="/Images/dailyPrompt.png" alt="">
           </div>
           <div class="slide">
-            <img src="prompt.png" alt="">
+            <img src="/Images/profile.png" alt="">
           </div>
           <div class="slide">
-            <img src="entry.png" alt="">
+            <img src="/Images/dailyPrompt.png" alt="">
           </div>
           <div class="slide">
-            <img src="view.png" alt="">
+            <img src="/Images/newEntry.png" alt="">
           </div>
-          <!-- <div class="slide">
-            <img src="5.png" alt="">
-          </div> -->
+          <div class="slide">
+            <img src="/Images/view.png" alt="">
+          </div>
         </div>
   
         <div class="navigationBTN">
