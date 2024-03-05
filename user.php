@@ -130,39 +130,40 @@
             <h2 class="header--title">My Profile</h2>
         </header>
         <section class="user-profile container mt-4" id="userprof">
-            <div class="row">
+            <div class="row align-items-stretch">
                 <!-- User Picture -->
                 <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="user-picture-wrapper w-100">
+                    <div class="user-picture-wrapper mt-2 w-100">
                         <img src="Images/cross.jpg" alt="User Picture" class="img-fluid rounded" id="user-picture">
                     </div>
                 </div>
-                
-                <!-- User Details -->
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="user-details-wrapper bg-light p-3 rounded w-100">
-                        <h2 class="header--title">Your Information:</h2>
-                        <hr>
+                <!-- User Information and Details -->
+                <div class="col-md-6 d-flex flex-column justify-content-between">
+                    <div class="userbg">
+                    <div class="user-details-wrapper rounded w-100">
+                        <h2 class="yourInfo">Your Information:</h2>
+                        <br>
                         <div id="userDetails">
-                        <p>First Name: <span id="userFirstName">John</span></p>
-                        <p>Last Name: <span id="userLastName">Doe</span></p>
-                        <p>Email: <span id="userEmail">john.doe@example.com</span></p>
-                        <p>User Details: <span id="userDetails">Not provided yet.</span></p>
+                            <p>First Name  : <span id="userFirstName">John</span></p>
+                            <p>Last Name   : <span id="userLastName">Doer</span></p>
+                            <p>Email       : <span id="userEmail">john.doe@example.com</span></p>
+                            <p>User Details: <span id="userDetails">Not provided yet.</span></p>
+                        </div>
                     </div>
                     </div>
                 </div>
             </div>
         </section>
-        <br>
-        <br>
-
-        <div class="container mt-4">
-           
-            <h2 class="header--title">Edit Profile</h2>
-            <div class="row">
-                <!-- Form on the left -->
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="user-details-wrapper bg-light p-3 rounded w-100">
+    </div>
+<br>
+<br>
+    <!-- Edit Profile Section -->
+    <div class="container mt-4">
+        <div class="row">
+            <!-- Form on the left -->
+            <h2 class="yourInfo">Edit Profile</h2>
+            <div class="col-md-6 d-flex align-items-stretch">
+                <div class="user-details-wrapper rounded w-100 editform">
                     <form id="profileForm">
                         <div class="form-group">
                             <label for="firstName">First Name</label>
@@ -184,21 +185,21 @@
                             <label for="selfDescription">About Me</label>
                             <textarea class="form-control" id="selfDescription" rows="3"></textarea>
                         </div>
-                   
                         <button type="submit" class="btn btn-primary" id="btnupdate">Update Profile</button>
-                    </div>
                     </form>
                 </div>
-
-                <div class="col-md-6 d-flex align-items-stretch" id="edpic">
-                    <div class="user-picture-wrapper">
-                        <img src="Images/bible06.jpg" alt="User Picture" class="img-fluid rounded" id="user-picture">
-                    </div>
+            </div>
+            
+            <!-- User Picture for Edit Profile Section -->
+            <div class="col-md-6 d-flex align-items-stretch" id="edpic">
+                <div class="user-picture-wrapper">
+                    <img src="Images/bible06.jpg" alt="User Picture" class="img-fluid rounded" id="user-picture">
                 </div>
             </div>
-            </div>
         </div>
+    </div>
 </div>
+
 
 
 <!-- Today's prompt tab -->
@@ -211,18 +212,19 @@
             </div>
         </div>
 
-        <section class="user-profile container mt-4" id="userprof">
-            <div class="row">
+        <section class="user-profile container mt-4" id="userprof">  
+            <img id = "left" src= "/Images/bible01.jpg"/>  
+            <!-- <div class="row"> -->
                 <!-- User Picture -->
-                <div class="col-md-6 d-flex align-items-stretch">
+                <!-- <div class="col-md-6 d-flex align-items-stretch">
                     <div class="user-picture-wrapper w-100">
                         <img src="Images/bible07.jpg" alt="User Picture" class="img-fluid rounded" id="user-picture">
                     </div>
-                </div>
+                </div> -->
                 
                 <!-- User Details -->
                 <div class="col-md-6 d-flex align-items-stretch">
-                    <div class="user-details-wrapper bg-light p-3 rounded w-100">
+                    <div class="user-details-wrapper p-3 rounded w-100">
                         <h2 class="header--title">Today's Prompt</h2>
                         <hr>
                         <div id="userDetails">
@@ -232,11 +234,10 @@
                     </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </section>
     </div>
 </div>
-
 
   <!-- (Make a Devo pages)-->
   <div class="tab-pane fade" id="JournalEntry" role="tabpanel" aria-labelledby="v-pills-JournalEntry-tab">
@@ -286,13 +287,9 @@
 </div>
 </div>
 
-
-
-
- 
-
-                <!-- View Journals Tab Pane -->
-                <div class="tab-pane fade" id="ViewJournal" role="tabpanel" aria-labelledby="v-pills-viewJournal-tab">
+ <!-- View Journals Tab Pane -->
+ <div class="tab-pane fade" id="viewJournal" role="tabpanel" aria-labelledby="v-pills-viewJournal-tab">
+                    <div class="view-journal-container">
                     <div class="viewjournal">
                         <div class="header--wrapper">
                             <div class="header--title">
@@ -313,15 +310,10 @@
                                                 <p class="card-text">Label</p>
                                                 <small class="text-muted">Date</small>
                                             </div>
-                                            <div class="ms-auto">
-                                            <a href="#" class="trash-icon me-2">
-                                                <img src="Icons/trash-can.png" alt="Delete" style="width: 24px; height: 24px;">
-                                            </a>
                                             <!-- View Icon aligned to the right -->
                                             <a href="#" data-bs-toggle="modal" data-bs-target="#viewEntryModal" data-entry-id="1" class="view-entry-icon ms-auto">
                                                 <img src="Icons/eye (1).png" alt="View" style="width: 24px; height: 24px;">
                                             </a>
-                                        </div>
                                         </div>
                                                                               
                                     </div>
@@ -337,15 +329,10 @@
                                                 <p class="card-text">Label</p>
                                                 <small class="text-muted">Date</small>
                                             </div>
-                                            <div class="ms-auto">
-                                                <a href="#" class="trash-icon me-2">
-                                                    <img src="Icons/trash-can.png" alt="Delete" style="width: 24px; height: 24px;">
-                                                </a>
-                                                <!-- View Icon aligned to the right -->
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#viewEntryModal" data-entry-id="1" class="view-entry-icon ms-auto">
-                                                    <img src="Icons/eye (1).png" alt="View" style="width: 24px; height: 24px;">
-                                                </a>
-                                            </div>
+                                            <!-- View Icon aligned to the right -->
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#viewEntryModal" data-entry-id="1" class="view-entry-icon ms-auto">
+                                                <img src="Icons/eye (1).png" alt="View" style="width: 24px; height: 24px;">
+                                            </a>
                                         </div>
                                         
                                     </div>
@@ -360,15 +347,10 @@
                                                 <p class="card-text">Label</p>
                                                 <small class="text-muted">Date</small>
                                             </div>
-                                            <div class="ms-auto">
-                                                <a href="#" class="trash-icon me-2">
-                                                    <img src="Icons/trash-can.png" alt="Delete" style="width: 24px; height: 24px;">
-                                                </a>
-                                                <!-- View Icon aligned to the right -->
-                                                <a href="#" data-bs-toggle="modal" data-bs-target="#viewEntryModal" data-entry-id="1" class="view-entry-icon ms-auto">
-                                                    <img src="Icons/eye (1).png" alt="View" style="width: 24px; height: 24px;">
-                                                </a>
-                                            </div>
+                                            <!-- View Icon aligned to the right -->
+                                            <a href="#" data-bs-toggle="modal" data-bs-target="#viewEntryModal" data-entry-id="1" class="view-entry-icon ms-auto">
+                                                <img src="Icons/eye (1).png" alt="View" style="width: 24px; height: 24px;">
+                                            </a>
                                         </div>                                        
                                     </div>
                                 </div>
@@ -377,8 +359,6 @@
                         </div>
                     </div>
                 </div>
-
-                 
 
 
               <!-- Modal -->
@@ -421,29 +401,10 @@
         </div>
     </div>
 </div>
+</div>
 
   
                 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

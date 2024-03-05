@@ -1,11 +1,11 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /*Admin and User page styling*/
 * {
     margin: 0;
     padding: 0;
     border: none;
     box-sizing: border-box;
-    font-family: "Poppins" , Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -255,6 +255,7 @@ body{
     background: #ebe9e9;
     width: 100%;
     padding: 1rem;
+    background-color: #dda83f73
 }
 
 .header--wrapper{
@@ -263,7 +264,7 @@ body{
     align-items: center;
     flex-wrap: wrap;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 10px 2rem;
     margin-bottom: 1rem;
 }
@@ -284,38 +285,54 @@ body{
     font-family: "Poppins" , Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: x-large;
+    
 }
-
-
 
 #userprof {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: start;
-    gap: 20px; /* Adjust the space between the picture and the details */
+    gap: 20px;
 }
 
 .user-picture-wrapper {
-    display: flex; /* Ensures the content within aligns properly */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
-    overflow: hidden; /* Prevents the image from overflowing its container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -20px;
 }
 
 .user-picture-wrapper img {
-    max-height: 100%; /* Ensures the image height does not exceed its container */
+    max-height: 100%;
 }
 
-.user-details-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Adjusts content to the center if there's extra space */
+.user-details-wrapper { 
+    padding: 2rem;
+}
+
+.editform{
+    background: #dda83f28;
+    padding: 2rem;
+    margin-top: 30px;
+}
+
+.yourInfo {
+    text-decoration: underline;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: x-large;
+    color: rgba(113, 99, 186, 255);   
+}
+
+.userbg{
+    margin-top: 90px;
+    background:#ffffff9c;
 }
 
 
 
-
-.header--wrapper, .user-info, .container {
+.header--wrapper, .container {
     margin-bottom: 20px;
 }
 
@@ -410,6 +427,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* filter: blur(4px); */
     overflow: hidden;
 }
 
@@ -458,12 +476,23 @@ body{
 
 /* VIEW JOURNAL STYLING */
 
-.viewjournal{
-    position: relative;
-    background: #ebe9e9;
-    width: 100%;
-    padding: 1rem;
+.view-journal-container {
+    background-image: url(/Images/view.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff; /* Set text color to white for better contrast */
+
+    padding: 20px; /* Add padding to the container */
+    margin-bottom: 20px; /* Add some margin below the container */
+    min-height: 100vh; /* Ensure the container covers at least the entire viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    backdrop-filter: blur(1000px); 
 }
+
 
 
 /* ADMIN UPLOAD PROMPT */
@@ -494,9 +523,12 @@ body{
 
 
 #modalbtn1:hover {
-    background-color: #7263bacc; /* Lighten the background on hover */
+    background-color: rgba(113, 99, 186, 0.8); /* Lighten the background on hover */
     color: #eee7e7; /* Change text color for contrast */
     transform: scale(1.05); /* Slightly increase the button size */
 }
 
-/* VIEW JOURNAL */
+#left {  
+    object-fit: none;  
+    object-position: left top;  
+    }  
