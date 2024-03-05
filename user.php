@@ -6,61 +6,64 @@
     <title>User</title>
     <link href="style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 
-<div class="container-fluid">
-    <div class="row">
-        <!-- Sidebar / Menu -->
-        <div class="col-auto min-vh-100" id="sidebar">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="Images/devlogo.png" alt="DevotionDiaries" style="max-height: 100%; max-width: 100%;">
-                </a>
+   
+            <div class="sidebar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Images/devlogo.png" alt="DevotionDiaries" style="max-height: 100%; max-width: 100%;">
+                    </a>
+                </div> 
+                <nav class="nav nav-pills flex-column">
+                    <ul class="menu">
+                    <li class="nav-item active">
+                        <a class="nav-link active" id="v-pills-dashboard-tab" data-bs-toggle="pill" href="#dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Dashboard</span>       
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <i class="fas fa-user"></i>
+                            <span>Profile</span>       
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" id="v-pills-todaysPrompt-tab" data-bs-toggle="pill" href="#todaysPrompt" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <i class="fas fa-calendar-day"></i>
+                            <span>Daily Prompt</span>       
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" id="v-pills-JournalEntry-tab" data-bs-toggle="pill" href="#JournalEntry" role="tab" aria-controls="v-pills-newJournal" aria-selected="false">
+                            <i class="fas fa-edit"></i>
+                            <span>New Journal Entry</span>       
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" id="v-pills-viewJournal-tab" data-bs-toggle="pill" href="#viewJournal" role="tab" aria-controls="v-pills-viewJournal" aria-selected="false">
+                            <i class="fas fa-eye"></i>
+                            <span>View Journals</span>       
+                        </a>
+                    </li>
+                    <li class="logout">
+                        <a href="index.html" data-bs-toggle="pill" data-bs-target="#logout">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Log out</span>       
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <!-- Nav tabs -->
-            <ul class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <li class="nav-item">
-                    <a class="nav-link active" id="v-pills-dashboard-tab" data-bs-toggle="pill" href="#dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">
-                        <i class="fas fa-tachometer-alt"></i> Dashboard
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                        <i class="fas fa-user"></i> Profile
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="v-pills-todaysPrompt-tab" data-bs-toggle="pill" href="#todaysPrompt" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                        <i class="fas fa-calendar-day"></i> Daily Prompt
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="v-pills-JournalEntry-tab" data-bs-toggle="pill" href="#JournalEntry" role="tab" aria-controls="v-pills-newJournal" aria-selected="false">
-                        <i class="fas fa-edit"></i> New Journal Entry
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="v-pills-viewJournal-tab" data-bs-toggle="pill" href="#viewJournal" role="tab" aria-controls="v-pills-viewJournal" aria-selected="false">
-                        <i class="fas fa-eye"></i> View Journals
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        <i class="fas fa-sign-out-alt"></i> Log Out
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Tab Content -->
-        <div class="col">
+            
+         <!-- Tab Content -->
+         <div class="col">
             <div class="tab-content" id="v-pills-tabContent">
                 <!-- Dashboard Tab Pane -->
                 <div class="tab-pane fade show active" id="dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
@@ -77,7 +80,6 @@
                                     <img src="/Images/bible.jpg" class="card-img-top" alt="Description of the image">
                                     <div class="card-body text-center py-4">
                                         <h4 class="card-title">Recent Journal Entries</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                         <a href="viewJournal" id="dashbtn" class="btn btn-primary">View Journal</a>
                                     </div>
                                 </div>
@@ -88,7 +90,6 @@
                                     <img src="/Images/bible01.jpg" class="card-img-top" alt="Description of the image">
                                     <div class="card-body text-center py-4">
                                         <h4 class="card-title">Prompt For Today</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                         <a href="newJournal" id="dashbtn" class="btn btn-primary">Make a Devo Page</a>
                                     </div>
                                 </div>
@@ -122,7 +123,6 @@
                 </div>
 
                 
-
 <!-- Profile Tab Pane -->
 <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
     <div class="prof">
@@ -200,11 +200,9 @@
     </div>
 </div>
 
-
-
 <!-- Today's prompt tab -->
 
-<div class="tab-pane fade" id="todaysPrompt" role="tabpanel" aria-labelledby="v-pills-prompt-tab">
+<div class="tab-pane fade" id="todaysPrompt" role="tabpanel" aria-labelledby="v-pills-todaysPrompt-tab">
     <div class="todaysPrompt">
         <div class="header--wrapper">
             <div class="header--title">
@@ -213,14 +211,12 @@
         </div>
 
         <section class="user-profile container mt-4" id="userprof">  
-            <img id = "left" src= "/Images/bible01.jpg"/>  
-            <!-- <div class="row"> -->
-                <!-- User Picture -->
-                <!-- <div class="col-md-6 d-flex align-items-stretch">
+
+               <div class="col-md-6 d-flex align-items-stretch">
                     <div class="user-picture-wrapper w-100">
-                        <img src="Images/bible07.jpg" alt="User Picture" class="img-fluid rounded" id="user-picture">
+                        <img src="/Images/bible01.jpg" alt="User Picture" class="img-fluid rounded" id="user-picture">
                     </div>
-                </div> -->
+
                 
                 <!-- User Details -->
                 <div class="col-md-6 d-flex align-items-stretch">
@@ -239,17 +235,17 @@
     </div>
 </div>
 
+
   <!-- (Make a Devo pages)-->
   <div class="tab-pane fade" id="JournalEntry" role="tabpanel" aria-labelledby="v-pills-JournalEntry-tab">
-  <div id="devoPages" >
+    <div id="devoPages" >
     <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-lg-10">
             <div class="card shadow-lg"> <!-- Added shadow for depth -->
                 <div id="headdevo" class="card-header">
-                    <h2 class="text-center mb-0">Create A Devo Page</h2>
+                    <h1 class="text-center mb-0">Create A Devo Page</h1>
                 </div>
-                
                 <div class="card-body">
                     <form>
                         <div class="mb-3">
@@ -287,8 +283,13 @@
 </div>
 </div>
 
- <!-- View Journals Tab Pane -->
- <div class="tab-pane fade" id="viewJournal" role="tabpanel" aria-labelledby="v-pills-viewJournal-tab">
+
+
+
+ 
+
+                <!-- View Journals Tab Pane -->
+                <div class="tab-pane fade" id="viewJournal" role="tabpanel" aria-labelledby="v-pills-viewJournal-tab">
                     <div class="view-journal-container">
                     <div class="viewjournal">
                         <div class="header--wrapper">
@@ -359,11 +360,15 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
               <!-- Modal -->
-<div class="modal fade" id="viewEntryModal" tabindex="-1" aria-labelledby="viewEntryModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg"> <!-- Use modal-lg for larger modal -->
+              <div class="modal fade" id="viewEntryModal" tabindex="-1" aria-labelledby="viewEntryModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg"> <!-- Use modal-lg for larger modal -->
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="viewEntryModalLabel">Your Devotional</h5>
@@ -401,73 +406,50 @@
         </div>
     </div>
 </div>
-</div>
 
-  
-                
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var myTabs = new bootstrap.Tab(document.getElementById('v-pills-dashboard-tab'));
+        myTabs.show();  // Activate the first tab
 
+        // Initialize other tabs as needed
+        var profileTab = new bootstrap.Tab(document.getElementById('v-pills-profile-tab'));
+        var todaysPromptTab = new bootstrap.Tab(document.getElementById('v-pills-todaysPrompt-tab'));
+        var journalEntryTab = new bootstrap.Tab(document.getElementById('v-pills-JournalEntry-tab'));
+        var viewJournalTab = new bootstrap.Tab(document.getElementById('v-pills-viewJournal-tab'));
 
-
-
-
-
-
-                <!-- <div class="tab-pane fade" id="viewJournal" role="tabpanel" aria-labelledby="v-pills-viewJournal-tab">
-                    <div class="viewjournal">
-                        <div class="header--wrapper">
-                            <div class="header--title">
-                                <h2>View Journal Entries</h2>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <!-- Journal Entries List -->
-                            <!-- <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <h5 class="mb-1">Devotional Title</h5>
-                                        <small id="day">3 days ago</small>
-                                    </div>
-                                    <p class="mb-1">Label</p>
-                                    <small>Date</small>
-                                </a>
-                                <!-- More list items here -->
-                            <!-- </div>
-                        </div>
-                    </div>
-                </div> --> --> -->
-
-
-
-
-            </div>
-        </div>
-    </div>
-</div>
+        // Show or activate the tabs based on your requirements
+        profileTab.show();
+        todaysPromptTab.show();
+        journalEntryTab.show();
+        viewJournalTab.show();
+    });
+</script>
 
    
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        // Listen for click events on elements with the 'view-entry-icon' class
-        document.querySelectorAll('.view-entry-icon').forEach(item => {
-            item.addEventListener('click', event => {
-                // Prevent the default anchor click behavior
-                event.preventDefault();
-    
-                // Retrieve the entry ID
-                const entryId = item.getAttribute('data-entry-id');
-                
-                // Here you would fetch the entry details based on the entryId
-                // For demonstration, we'll just set a static content
-                const entryContent = `Content for entry ID ${entryId}`;
-                
-                // Set the content in the modal body
-                document.querySelector('#viewEntryModal .modal-body').textContent = entryContent;
-                
-                // Now the modal will be shown automatically because of the data-bs-toggle and data-bs-target attributes
-            });
-        });
-    });
-    </script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        // Listen for click events on elements with the 'view-entry-icon' class
+                        document.querySelectorAll('.view-entry-icon').forEach(item => {
+                            item.addEventListener('click', event => {
+                                // Prevent the default anchor click behavior
+                                event.preventDefault();
+            
+                                // Retrieve the entry ID
+                                const entryId = item.getAttribute('data-entry-id');
+            
+                                // Here you would fetch the entry details based on the entryId
+                                // For demonstration, we'll just set a static content
+                                const entryContent = `Content for entry ID ${entryId}`;
+            
+                                // Set the content in the modal body
+                                document.querySelector('#viewEntryModal .modal-body').textContent = entryContent;
+            
+                                // Now the modal will be shown automatically because of the data-bs-toggle and data-bs-target attributes
+                            });
+                        });
+                    });
+                </script>
     
  
 

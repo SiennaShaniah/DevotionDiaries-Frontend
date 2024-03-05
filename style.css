@@ -12,68 +12,101 @@ body{
     display: flex;
 }
 
-#sidebar{
-    position:sticky;
+.sidebar {
+    position: sticky;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 10px;
+    width: 70px;
     height: 100vh;
-    padding: 0 ;
+    padding: 0 1.7rem;
     color: #fff;
     overflow: hidden;
     transition: all 0.5s linear;
     background: rgba(113, 99, 186, 255);
 }
 
-#sidebar:hover{
-    width: 260px;
+.sidebar.active,
+.sidebar:hover {
+    width: 240px;
     transition: 0.5s;
 }
 
-
-
-.logo img {
-    display: block; /* Centers the image in the div */
-    max-height: 70px; /* Adjust based on your preference */
-    max-width: 100%; /* Ensures the image is not wider than the sidebar */
-    margin: 0 auto; /* Centers the image horizontally */
-}
-
-
-#v-pills-tab ul{
-    height: 50px;
+.menu {
+    height: 88%;
     position: relative;
     list-style: none;
     padding: 0;
 }
 
-#v-pills-tab li{
-    height: 50px;
+.menu li {
     padding: 1rem;
-    margin: 1px 0;
+    margin: 8px 0;
     border-radius: 8px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.1s ease-in-out;
 }
 
+.menu a {
+    color: #fff !important;
+    font-size: 14px;
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
 
-#v-pills-tab a{
+.menu li a {
     color: #fff;
     font-size: 14px;
     text-decoration: none;
     display: flex;
-    align-items: start;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-#v-pills-tab a:hover {
-    background-color: #cac7c7;
-    color: #fff;
+.menu li:hover {
+    background: #cccccc43;
 }
 
-#v-pills-tab a.active, #v-pills-tab a.active:hover {
-    background-color: #cac7c7;
-    color: #fff;
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+    margin-left: -30px;
+}
+
+.logout {
+    position: absolute;
+    bottom: -200px;
+    left: 20px;
+    width: 100%;
+}
+
+.logoutAdmin {
+    position: absolute;
+    bottom: -450px;
+    left: 20px;
+    width: 100%;
+}
+
+.logo a img {
+    display: none; /* hide the image by default */
+    max-height: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.sidebar:hover .logo a img,
+.sidebar.active .logo a img {
+    display: block; /* show the image on hover or when active */
+}
+
+
+.sidebar:hover .logo img,
+.sidebar.active .logo img {
+    display: block; /* show the image on hover or when active */
 }
 
 
@@ -528,7 +561,7 @@ body{
     transform: scale(1.05); /* Slightly increase the button size */
 }
 
-#left {  
+#luser-picture {  
     object-fit: none;  
     object-position: left top;  
     }  
